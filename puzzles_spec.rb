@@ -13,6 +13,7 @@ def rozwiazanie01(array)
   # http://ruby-doc.org/core-1.9.3/Array.html#method-i-map
 
   # tutaj wpisz kod
+  array.map{|e| 2*e}
 end
 
 describe 'Rozwiązanie 1' do
@@ -39,6 +40,7 @@ def rozwiazanie02(array)
   # http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-max_by
 
   # tutaj wpisz kod
+  array.max_by(&:length)
 end
 
 describe 'Rozwiązanie 2' do
@@ -65,8 +67,13 @@ def rozwiazanie03(array)
   # w którym przechowasz następującą informację
   # {"słowo" => długość_słowa, "inne_słowo" => długość_słowa, ...}
   # następnie wybierz tylko te, gdzie długość_słowa jest największa
+  #
+  # inna wskazówka: znajdź długość dowolnego najdłuższego słowa
+  # znajdź wszystkie słowa, o tej samej najdłuższej długości
 
   # tutaj wpisz kod
+  max_length = array.map{|e| e.length}.max
+  array.select{|e| e.length == max_length}
 end
 
 describe 'Rozwiązanie 3' do
@@ -94,6 +101,10 @@ def rozwiazanie04(string)
   # znajdź literę z największą liczbą wystąpień
 
   # tutaj wpisz kod
+  litery = string.split('').sort.uniq
+  wystapienia = {}
+  szukana_litera = litery.max_by{|litera| string.count(litera)}
+  {szukana_litera => string.count(szukana_litera)}
 end
 
 describe 'Rozwiązanie 4' do
