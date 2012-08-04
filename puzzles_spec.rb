@@ -65,6 +65,9 @@ def rozwiazanie03(array)
   # w którym przechowasz następującą informację
   # {"słowo" => długość_słowa, "inne_słowo" => długość_słowa, ...}
   # następnie wybierz tylko te, gdzie długość_słowa jest największa
+  #
+  # inna wskazówka: znajdź długość dowolnego najdłuższego słowa
+  # znajdź wszystkie słowa, o tej samej najdłuższej długości
 
   # tutaj wpisz kod
 end
